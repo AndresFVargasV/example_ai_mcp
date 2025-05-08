@@ -87,14 +87,4 @@ def formatAlert(feature: dict) -> str:
     """
 
 if __name__ == "__main__":
-    import logging
-    
-    # Setup logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    
-    # Initialize and run the server
-    print("Iniciando servidor MCP para información meteorológica...")
-    mcp.run()
+    mcp.run(transport='stdio')
